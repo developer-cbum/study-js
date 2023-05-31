@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합 실습 4</title>
+</head>
+<body>
+    <!-- 
+        pr("%", 5);
+        결과 : %%%%%
+
+        위의 결과가 나오는 함수를 선언하여 사용한다.
+        출력은 콜백함수를 사용한다.
+        출력할 문자와 출력할 횟수를 다이얼로그로 입력받아서 처리
+     -->
+</body>
+<script>
+    let character = prompt("출력하실 문자를 입력하세요.");
+    let count = prompt("출력하실 횟수를 입력하세요.");
+    let element;
+    with(document){
+        element = `<h3>pr(<q>${character}</q>, ${count})</h3>`;
+        write(element);
+        write(`<button onclick="pr('${character}', ${count}, print)">결과 확인</button>`);
+    }
+
+    function pr(character, count, callback){
+        let result = "";
+        for(let i=0; i<count; i++){
+            result += character;
+        }
+
+        if(callback){
+            callback(result);
+            return;
+        }
+        return result;
+    }
+
+    function print(result){
+        with(document){
+            write(element);
+            write(`<h4>결과: ${result}</h4>`);
+        }
+    }
+</script>
+</html>

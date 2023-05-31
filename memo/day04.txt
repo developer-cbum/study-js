@@ -1,0 +1,53 @@
+자바스크립트 객체
+	객체의 고유한 속성을 프로퍼티(property)라고 부르며,
+	프로퍼티는 KEY와 VALUE 한 쌍으로 구성된다.
+
+	let account = {name: "한동석", number: "110-123-123123", code: "1234"}
+
+	선언 또는 사용 또는 수정
+
+	account.프로퍼티명
+	account["프로퍼티명"]
+
+
+	메소드
+		account.deposit = function(){}
+		account.deposit();
+-------------------------------------------------------------------------------
+전역 함수
+	- eval()
+		문자열 형태의 수식을 전달받아서 수식을 계산한다.
+		eval("2+3*6-7") == 13;
+
+	- parseInt()
+		문자열을 정수로 변환
+		parseInt("34") === 34
+
+	- isNaN()
+		값이 NaN이면 true
+		NaN이 아니면 false
+
+	- isFinite()
+		값이 NaN이 아니면 true
+		NaN이면 false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

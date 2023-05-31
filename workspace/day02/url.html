@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL에 JS 코드 작성</title>
+  </head>
+  <body>
+    <h3>링크의 href에 자바스크립트 코드 작성</h3>
+    <hr />
+    <h4></h4>
+    <!-- a 태그 안에 href에 자바스크립트에서 this는 window 객체 즉 새로운 document에서 적용된다. -->
+    <a href="javascript:changeBackgroundColor()">배경색 변경</a>
+  </body>
+  <script>
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = 'yellow';
+    }
+  </script>
+</html>

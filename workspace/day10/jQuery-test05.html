@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 기초 예제5</title>
+    <style>
+        #wrap {
+            border: 1px solid #000;
+            display: flex;
+            width: 200px;
+        }
+
+        div.password {
+            width: 80%;
+        }
+
+        input[name='userPassword'] {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        div.eye {
+            cursor: pointer;
+            width: 20%;
+            background-image: url("eye-close.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position-y: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="password">
+            <input type="password" name="userPassword" placeholder="비밀번호" maxlength="12">
+        </div>
+        <div class="hide eye"></div>
+    </div>
+    <!-- history -->
+    <!-- back(): 뒤로 가기 -->
+    <!-- forward(): 앞으로 가기 -->
+    <!-- go(i): i로 이동(0: 새로고침, 음수: 뒤로 가기, 양수: 앞으로 가기) -->
+    <button id="back" onclick="history.back()">뒤로 가기</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    const $input = $("input[name=userPassword]");
+    const $eye = $("div.eye");
+
+    $eye.on("click", function(){
+        if($(this).prop("classList")[0] == 'hide'){
+            $(this).css("background-image", "url('eye-open.png')");
+            $(this).prop("classList").replace("hide", "show");
+            $(this).css("background-position-y", "0");
+            $input.attr("type", "text");
+        }else{
+            $(this).css("background-image", "url('eye-close.png')");
+            $(this).prop("classList").replace("show", "hide");
+            $(this).css("background-position-y", "3px");
+            $input.attr("type", "password");
+        }
+    });
+
+</script>
+</html>

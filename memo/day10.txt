@@ -1,0 +1,32 @@
+jQuery
+	요소들을 선택하는 강력한 방법을 사용하고 선택된 요소들을
+	효율적으로 제어할 수 있는 자바스크립트 라이브러리이다.
+
+jQuery 기본 문법
+	$("선택자")
+
+값 가져오기
+	$("선택자").val(): 입력한 값을 가져올 때
+	$("선택자").text(): 미리 작성된 값을 가져올 때
+
+반복문
+	$.each(iterator, function(index, item){});
+	$.each(iterator, (indext, item) => {});
+	iterator.each(function(index, item){});
+	iterator.each((index, item) => {});
+
+jQuery를 사용하면, 순수 JS에 비해 속도가 느려진다.
+하지만 간결한 문법으로 인해 개발 속도 증가와 처리비용 감소에 대한 장점이 있으며,
+60% 이상의 웹 사이트에서 사용하고 있기 때문에 적절한 상황에 맞춰 사용할 줄 알아야 한다.
+
+
+
+
+
+
+
+
+
+
+
+

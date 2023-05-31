@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 이벤트</title>
+</head>
+<body>
+    <ul id="food">
+        <li>떡볶이</li>
+        <li>피자</li>
+        <li>치킨</li>
+        <li>돈까스</li>
+    </ul>
+    <button id="show">보여줘!</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    const list = $("#food li");
+    const button = $("#show");
+
+    button.on("click", function(){
+        // list.show();
+        // list.toggle();
+        // list.fadeToggle(1000);
+        // list.slideToggle(1000);
+    });
+
+    list.on("click", function(){
+        $(this).hide();
+    });
+</script>
+</html>

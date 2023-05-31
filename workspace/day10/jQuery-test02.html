@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 기초 예제2</title>
+</head>
+<body>
+    <ul class="car">
+        <li>G바겐</li>
+        <li>벤틀리</li>
+        <li id="super">마세라티</li>
+    </ul>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    const $lists = $("li");
+    const $ul = $("ul.car");
+    const $super = $("#super");
+    
+    console.log($ul);
+    $ul.css("list-style", "none");
+
+    // 이전 요소: prev()
+    // console.log($super.prev().text())
+
+    // 다음 요소: next()
+    // console.log($ul.children().first().next().text())
+
+    // find(): 자식 요소에서 검색
+    // $(document.body).find("#super").text("페라리");
+
+    // closest(): 부모 요소에서 검색
+    // $super.closest(".car").children().each((i, li) => console.log($(li).text()));
+
+    // console.log($(document.body).children().children("#super").text("페라리"));
+
+    // console.log($ul.children());
+    // $ul.children().first().css("color", "red");
+    // $ul.children().last().css("color", "blue");
+
+    // console.log($lists);
+    // jQuery객체를 []로 접근하면 JS객체로 변경된다.
+    // $lists[0].style.color = "blue";
+    // $($lists[0]).css("color", "blue");
+    // $lists.eq(0).css("color", "blue");
+</script>
+</html>

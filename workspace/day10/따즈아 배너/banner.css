@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+/* 배너 전체 규격 정하고 넘치면 숨기기 */
+section.container {
+  position: relative;
+  width: 1600px;
+  height: 390px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 컨테이너 안에 배너 사이즈 */
+div.banner {
+  width: 22400px;
+  height: 390px;
+  transform: translate(-1600px);
+}
+
+/* div 배너 안에 모든 14개 div 들 전체 적용 */
+div.banner div {
+  width: 1600px;
+  height: 390px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+/* 이전버튼  */
+
+div.prev {
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid #ddd !important;
+  border-radius: 100%;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  font-size: 0 !important;
+  background: url(https://www.ddazua.com/theme/oklassedu/pix/images/icon_sd_arrow_l.png) no-repeat
+    center !important;
+  left: 180px;
+  top: 180px;
+  z-index: 1;
+}
+
+div.next {
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid #ddd !important;
+  border-radius: 100%;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  font-size: 0 !important;
+  background: url(https://www.ddazua.com/theme/oklassedu/pix/images/icon_sd_arrow_r.png) no-repeat
+    center !important;
+  right: 180px;
+  top: 180px;
+  z-index: 1;
+}
+
+ul.dots {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: auto;
+  text-align: right;
+  bottom: auto;
+  padding-left: 550px;
+  margin-left: -100px;
+  padding-top: 50px;
+  display: flex;
+  width: 254px;
+  justify-content: space-between;
+}
+
+li.dot {
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  list-style: none;
+  cursor: pointer;
+}
+
+li.dot:hover {
+  background-color: red !important;
+}

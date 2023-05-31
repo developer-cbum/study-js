@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body {
+    min-width: 1500px;
+}
+
+section.container {
+    width: 1500px;
+    height: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+div.banner {
+    width: 9000px;
+    height: 375px;
+    /* transform: translate(-1500px); */
+}
+
+div.banner div {
+    width: 1500px;
+    height: 375px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+}

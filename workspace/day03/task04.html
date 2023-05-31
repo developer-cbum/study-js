@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task04</title>
+  </head>
+  <body></body>
+  <script>
+    let temp = prompt('문자를 입력하시오');
+    let number = prompt('출력할 횟수를 입력하시오.');
+
+    function printTemp(temp, number, callback) {
+      if (callback) {
+        return callback(temp, number);
+      }
+      return temp, number;
+    }
+
+    let addTemp = printTemp(temp, number, function (temp, number) {
+      let answer = '';
+      for (let i = 0; i < number; i++) {
+        answer += temp;
+      }
+      return answer;
+    });
+
+    with (document) {
+      write(`<h3>pr("${temp}", ${number})</h3>`);
+      write(`<h3>결과 : ${addTemp}</h3>`);
+    }
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭 이벤트 - 실습</title>
+    <style>
+      #square-container {
+        margin: 0 auto;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+      }
+      div.square {
+        width: 150px;
+        height: 150px;
+        border: 0.5px solid #e0e0e0;
+        line-height: 150px;
+        text-align: center;
+        font-size: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="name" placeholder="이름" />
+      <input type="button" id="register" value="등록" />
+    </div>
+    <div id="square-container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+  </body>
+  <script src="event02.js"></script>
+  <script>
+    // 이름을 입력하고 등록버튼을 클릭한다.
+    // 각 사각형을 클릭하면 순서대로 성, 이름이 나오게된다.
+    // 입력 예) 한동석
+    // 출력 예) 한    동    석
+
+    // 이름이 두 글자라면, 마지막 사각형에는 ♥를 출력한다.
+    // 입력 예) 이찬
+    // 출력 예) 이    찬    ♥
+    button.addEventListener('click', function () {
+      register(showCharacter);
+    });
+  </script>
+</html>

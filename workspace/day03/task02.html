@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task02</title>
+  </head>
+  <body></body>
+  <script>
+    let input = prompt('요일을 입력하세요.');
+    let answer;
+
+    switch (input) {
+      case '월':
+        answer = '월요일은 출근';
+        break;
+      case '화':
+        answer = '화요일은 출근';
+        break;
+      case '수':
+        answer = '수요일은 출근';
+        break;
+      case '목':
+        answer = '목요일은 출근';
+        break;
+      case '금':
+        answer = '금요일은 출근';
+        break;
+      case '토':
+        answer = '토요일은 출근';
+        break;
+      case '일':
+        answer = '일요일은 출근';
+        break;
+      default:
+        answer = '잘못입력하셨습니다.';
+        break;
+    }
+
+    with (document) {
+      write(`<h3>월화수목금토일</h3><hr>`);
+      write(`<h3>${answer}</h3>`);
+    }
+  </script>
+</html>

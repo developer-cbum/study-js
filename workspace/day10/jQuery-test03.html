@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 기초 예제3</title>
+</head>
+<body>
+    <form action="" name="termForm">
+        <div>
+            <label>
+                서비스 이용약관 동의
+                <input type="checkbox" name="term1" class="term" checked="checked">
+            </label>
+        </div>
+        <div>
+            <label>
+                광고 수신 동의
+                <input type="checkbox" name="term2" class="term">
+            </label>
+        </div>
+        <div>
+            <label>
+                개인 정보 이용약관 동의
+                <input type="checkbox" name="term3" class="term">
+            </label>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    const $checkboxes = $(".term");
+    // JS에서 checked 프로퍼티를 변경하더라도 HTML에 작성된 checked 속성은 변경되지 않는다.
+    // 만약 체크상태로 유지하고 싶다면, JS에서 true를 설정하는 것이 혼란을 막을 수 있다.
+    // $checkboxes.eq(0).prop("checked", false);
+    // $checkboxes.each((i, checkbox) => console.log($(checkbox).prop("checked")));
+
+
+    // $checkboxes.each(function(i, checkbox){
+    //     let number = $checkboxes.index(this);
+    //     if($(checkbox).is(":checked")){
+    //         console.log(`${number}번 체크됨`);
+    //     }
+    // })
+
+    // $checkboxes.each((i, checkbox) => {
+    //     let number = $checkboxes.index(checkbox);
+    //     if($(checkbox).is(":checked")){
+    //         console.log(`${number + 1}번 체크됨`);
+    //     }
+    // });
+
+    // $checkboxes.click(function(){
+    //     console.log($(this).prop("checked"));
+    // });
+
+</script>
+</html>
